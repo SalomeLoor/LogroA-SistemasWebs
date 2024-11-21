@@ -96,6 +96,10 @@ function clearImputs(){
       const index = e.target.getAttribute('data-index');
       EditContact(index);
     }
+    if (e.target && e.target.classList.contains('eliminar')) {
+        const index = e.target.getAttribute('data-index');
+        deleteContact(index);
+      }
   });
   
    //funcion para editar un contacto
@@ -114,5 +118,12 @@ function clearImputs(){
   }
 
     // funcion para eliminar un contacto
+    function deleteContact(index) {
+        console.log("index a eliminar :"+ index);
+        infoContact.splice(index, 1);
+        localStorage.setItem("contact", JSON.stringify(infoContact));
+        // Volver a mostrar los datos
+        mostrarInfo();
+      }
    
 });
