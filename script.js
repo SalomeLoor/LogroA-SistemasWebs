@@ -76,18 +76,43 @@ function mostrarInfo() {
     });
   }
 
-  
+
 // funcion para verificar si el numeo ya existe en la lista de contactos
 function isNumberPhoneUnique(number) {
     return !infoContact.some((user) => user.NumberPhone === number);
   }
    // funcion para limpiar los campos de entrada
-  function clearImputs(){
+function clearImputs(){
       inputName.value = '';
       inputLastname.value = '';
       inputNumberPhone.value = '';
       inputEmail.value = '';
       selectEtiqueta.value = '';
    }
+
+   
+  infoMostrar.addEventListener('click', function(e) {
+    if (e.target && e.target.classList.contains('editar')) {
+      const index = e.target.getAttribute('data-index');
+      EditContact(index);
+    }
+  });
+  
+   //funcion para editar un contacto
+   function EditContact(index) {
+    let contactToEdit = infoContact[index];
+
+    // Llenar los campos con la información del usuario
+    inputName.value = contactToEdit.name;
+    inputLastname.value = contactToEdit.lastname;
+    inputNumberPhone.value = contactToEdit.NumberPhone;
+    inputEmail.value = contactToEdit.email;
+    selectEtiqueta.value = contactToEdit.etiqueta;
+
+    // Guardar el índice en un atributo data para saber qué usuario estamos editando
+    BtnSaveContact.setAttribute('data-index', index);
+  }
+
+    // funcion para eliminar un contacto
    
 });
