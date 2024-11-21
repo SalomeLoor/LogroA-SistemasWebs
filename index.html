@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>App de Contactos</title>
+  </head>
+  <body>
+    <main>
+      <section class="container-AggContact">
+         <h1 class="federo-regular">Agregar Contacto 👥</h1>
+        <div class="container-Contact">
+          <label for="">
+            <input id="name" type="text" placeholder="Nombres" />
+          </label>
+          <label for="">
+            <input id="lastname" type="text" placeholder="Apellidos" />
+          </label>
+          <label for="">
+            <input id="NumberPhone" type="text" placeholder="Numero" />
+          </label>
+          <label for="">
+            <input id ="email" type="email" placeholder="Correo" />
+          </label>
+          <div class="etiqueta-contact">
+               <h3 class="federo-regular"> Etiqueta</h3>
+                <br>
+                <select id="etiqueta" name="" id="">
+                 <option value="">--Selecciona--</option>
+                 <option value="Mi número">Mi número</option>
+                 <option value="Familia">Familia</option>
+                 <option value="Pareja">Pareja</option>
+                 <option value="Amigo/a">Amigo/a</option>
+                 <option value="Trabajo">Trabajo</option>
+                 <option value="Universidad">Universidad</option>
+                 <option value="Escuela">Escuela</option>
+                 <option value="Ninguno">Ninguno</option>
+                </select>
+          </div>
+          <div class="btn">
+            <button id="Btn" class="federo-regular" type="button">Guardar 👤+</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="container-contactTable">
+        <div class="container-buscar">
+          <input type="text" placeholder="Buscar contacto" />
+          <button id="btnBuscar" type="button">🔍</button>
+        </div>
+        <div class="contsiner-tabla">
+          <table class="Table">
+            <thead class="federo-regular">
+              <tr>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Numero</th>
+                <th>Correo</th>
+                <th>Etiqueta</th>
+              </tr>
+            </thead>
+            <tbody id="Tbody">
+               
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
