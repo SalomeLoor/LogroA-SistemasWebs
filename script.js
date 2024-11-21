@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("contact", JSON.stringify(infoContact));
         clearImputs();
         alert("Contacto agregado con éxito");
-       
+        mostrarInfo();
 
       } else {
         alert("El número de teléfono ya existe");
@@ -58,7 +58,23 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 //funcion para mostrar los datos en la tabla 
-
+function mostrarInfo() {
+    infoMostrar.innerHTML = "";
+    console.log("contacto guardado : "+ infoContact);
+   
+    infoContact.forEach((c, index) => {
+      infoMostrar.innerHTML += `
+        <tr>
+          <td>${c.name}</td>
+          <td>${c.lastname}</td>
+          <td>${c.NumberPhone}</td>
+          <td>${c.email}</td>
+          <td>${c.etiqueta}</td>
+          <td><button class="editar" data-index="${index}">📝</button></td>
+          <td><button class="eliminar" data-index="${index}">🗑️</button></td>
+        </tr>`;
+    });
+  }
 
   
 // funcion para verificar si el numeo ya existe en la lista de contactos
