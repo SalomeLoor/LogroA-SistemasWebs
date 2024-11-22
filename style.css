@@ -1,180 +1,219 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Federo&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-:root{
-    --colorPiel:#FFECC8;
-    --colorPielFuerte:#FFD09B;
-    --colorPielBajito:#FEF9F2;
-    --colorPielBIenBajito:#FEFAE0;
-    --colorLigth:#FAF7F0;
-    --colorAmarillopastel:#FEFFA7;
-    --colorBlack:black;
-    --BorderColor1:#FFE6A5;
-    --BorderColor2:#EB8317;
-    --sombreado2: 4px 3px 1px 1px rgba(0, 0, 0, 0.253);
-    --borderRadius:10px;
+:root {
+  --colorPiel: #ffecc8;
+  --colorPielFuerte: #ffd09b;
+  --colorPielBajito: #fef9f2;
+  --colorPielBIenBajito: #fefae0;
+  --colorLigth: #faf7f0;
+  --colorAmarillopastel: #feffa7;
+  --colorBlack: black;
+  --BorderColor1: #ffe6a5;
+  --BorderColor2: #eb8317;
+  --sombreado2: 4px 3px 1px 1px rgba(0, 0, 0, 0.253);
+  --borderRadius: 10px;
 }
 .federo-regular {
-    font-family: "Federo", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-
-body{
-    width: 100%;
-    height: 100vh;
-    background-color: var(--colorLigth);
-}
-main{
-    width: 100%;
-    height: 100vh;
-    display: flex;
+  font-family: "Federo", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.container-AggContact{
-    width: 40%;
-    height: 97%;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    flex-direction: column;
-    background-color: var(--colorPielBajito);
-    border: 1px groove var(--BorderColor2);
-    border-radius: 10px;
-    padding: 1.5rem;
-    margin: 0.5rem;
+body {
+  width: 100%;
+  height: auto;
+  background-color: var(--colorLigth);
 }
-.container-AggContact h1{
- font-size: 30px;
- text-align: center;
- padding: 1rem;
-
-}
-.container-Contact{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 1.5rem;
-    padding-top:2rem;
-    gap: 1.5rem;
-}
-.container-Contact input{
-    width: 200px;
-    height: 30px;
-    background-color: var(--colorPielBIenBajito);
-    border: 1px solid var(--BorderColor1);
-    padding: .5rem;
-    border-radius: var(--borderRadius);
-}
-.etiqueta-contact{
-    width: 250px;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    padding: .5rem;
-    gap : 1rem;
-}
-.etiqueta-contact h3{
-    text-align: justify;
-}
-.etiqueta-contact select{
-    width: 120px;
-    height: 30px;
-    background-color: var(--colorPielBIenBajito);
-    border: 1px solid var(--BorderColor1);
-    padding: .3rem;
-    border-radius: var(--borderRadius);
-    cursor: pointer;
+main {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten automáticamente */
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem;
 }
 
-.btn{
-    margin: 3rem;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+.container-AggContact {
+  width: 50%;
+  max-width: 500px; /* Límite máximo para pantallas grandes*/
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  flex-direction: column;
+  background-color: var(--colorPielBajito);
+  border: 1px groove var(--BorderColor2);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin: 0.5rem;
+  box-shadow: var(--sombreado2);
 }
-#Btn{
-    width: 150px;
-    height: 40px;
-    border-radius:var(--borderRadius);
-    border: none;
-    box-shadow: var(--sombreado2);
-    background-color: var(--colorPiel);
-    cursor: pointer;
+.container-AggContact h1 {
+  font-size: 30px;
+  text-align: center;
+  padding: 1rem;
 }
-#Btn:hover{
-    background-color: var(--colorPielFuerte);
+.container-Contact {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+}
+.container-Contact input {
+  width: 100%;
+  max-width: 300px;
+  height: 35px;
+  background-color: var(--colorPielBIenBajito);
+  border: 1px solid var(--BorderColor1);
+  padding: 0.5rem;
+  border-radius: var(--borderRadius);
+}
+.etiqueta-contact {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row; /* Cambia a columna en dispositivos pequeños */
+  gap: 0.5rem;
+}
+.etiqueta-contact h3 {
+  text-align: justify;
+}
+.etiqueta-contact select {
+  width: 120px;
+  height: 30px;
+  background-color: var(--colorPielBIenBajito);
+  border: 1px solid var(--BorderColor1);
+  padding: 0.3rem;
+  border-radius: var(--borderRadius);
+  cursor: pointer;
 }
 
-.container-contactTable{
-    width: 60%;
-    height: 100%;
-    background-color: var(--colorLigth);
-    margin: 1rem;
-}
-.container-contactTable h3{
-    text-align: center;
-}
-.container-buscar{
-    width: 100%;
-    height: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1.5rem;
-    gap: 1rem;
-}
-.container-buscar input{
-    width: 200px;
-    height: 30px;
-    background-color: var(--colorPielBIenBajito);
-    border: 1px solid var(--BorderColor1);
-    padding: .5rem;
-    border-radius: var(--borderRadius);
+.btn {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 3rem;
 }
 
-.contsiner-tabla{
-    width: 100%;
-    height: auto;
+#Btn {
+  width: 150px;
+  height: 40px;
+  border-radius: var(--borderRadius);
+  border: none;
+  box-shadow: var(--sombreado2);
+  background-color: var(--colorPiel);
+  cursor: pointer;
+  padding: 0.5rem;
+}
+#Btn:hover {
+  background-color: var(--colorPielFuerte);
 }
 
-.Table{
-    margin: 2rem ;
-    width: 90%;
-    height: 100%;
+.container-contactTable {
+  width: 50%;
+  max-width: 500px; /* Límite máximo para pantallas grandes*/
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  flex-direction: column;
+  background-color: var(--colorPielBajito);
+  border: 1px groove var(--BorderColor2);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin: 0.5rem;
+  box-shadow: var(--sombreado2);
+}
+.container-contactTable h3 {
+  text-align: center;
+}
+.container-buscar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+.container-buscar input {
+  width: 100%;
+  max-width: 300px;
+  height: 35px;
+  background-color: var(--colorPielBIenBajito);
+  border: 1px solid var(--BorderColor1);
+  padding: 0.5rem;
+  border-radius: var(--borderRadius);
+}
 
+.contsiner-tabla {
+  width: 100%;
+  overflow-x: auto; /* Evita desbordamiento horizontal */
+}
+
+.Table {
+  width: 90%;
+  margin: 1rem 0;
 }
 .Table tr th {
-    height: 30px;
-    border: 1px groove var(--BorderColor2);
-    border-radius: var(--borderRadius);
-    background-color: var(--colorPielFuerte);
+  height: 30px;
+  border: 1px groove var(--BorderColor2);
+  border-radius: var(--borderRadius);
+  background-color: var(--colorPielFuerte);
 }
 .Table tr td {
-    padding: 0.5rem;
-    text-align: center;
-    height: 30px;
-    border: 1px groove var(--BorderColor2);
-    border-radius: 10px;
-    background-color: var(--colorPielBIenBajito);
+  padding: 0.5rem;
+  text-align: center;
+  height: 30px;
+  border: 1px groove var(--BorderColor2);
+  border-radius: var(--borderRadius);
+  background-color: var(--colorPielBIenBajito);
 }
-.Table  button{
-    width: 30px;
-    height: 30px;
-    border-radius: var(--borderRadius);
-    border: none;
-    box-shadow: var(--sombreado2);
-    cursor: pointer;
-   
+.Table button {
+  width: 30px;
+  height: 30px;
+  border-radius: var(--borderRadius);
+  border: none;
+  box-shadow: var(--sombreado2);
+  cursor: pointer;
 }
 
+/* Media Queries para dispositivos medianos y pequeños */
+@media (max-width: 1024px) {
+  .container-AggContact,
+  .container-contactTable {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-AggContact,
+  .container-contactTable {
+    width: 95%;
+  }
+
+  #Btn {
+    width: 100%; /* Botón ocupa todo el ancho */
+  }
+
+  .etiqueta-contact {
+    gap: 0.8rem; /* Ajusta separación */
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  .Table tr th,
+  .Table tr td {
+    font-size: 0.8rem;
+  }
+}
