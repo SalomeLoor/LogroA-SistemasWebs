@@ -94,6 +94,7 @@ main{
     border: 1px solid var(--BorderColor1);
     padding: .3rem;
     border-radius: var(--borderRadius);
+    cursor: pointer;
 }
 
 .btn{
@@ -109,6 +110,7 @@ main{
     border: none;
     box-shadow: var(--sombreado2);
     background-color: var(--colorPiel);
+    cursor: pointer;
 }
 #Btn:hover{
     background-color: var(--colorPielFuerte);
@@ -140,12 +142,7 @@ main{
     padding: .5rem;
     border-radius: var(--borderRadius);
 }
-#btnBuscar{
-    border: none;
-    width: 30px;
-    height: 30px;
-    background-color: var(--colorLigth);
-}
+
 .contsiner-tabla{
     width: 100%;
     height: auto;
@@ -177,6 +174,7 @@ main{
     border-radius: var(--borderRadius);
     border: none;
     box-shadow: var(--sombreado2);
+    cursor: pointer;
    
 }
 
